@@ -74,3 +74,20 @@ function getUserID(id: UserID){
 getUserID(123);
 
 getUserID("123");
+
+interface Address{
+    country:string;
+}
+//interface merging
+interface Address{
+    postal: number;
+}
+
+const address: Address ={
+    country: 'Thailand',
+    postal: 1234
+}
+function printAddress (address:Address){
+    console.log(`My address is ${address.country}, ${address.postal}`)
+}
+printAddress({country: 'Thailand',postal: 1234});
