@@ -9,3 +9,14 @@ const myStringArray: string[] = ["Hello","World"];
 
 const namesArray: string[] = [];
 namesArray.push("Jenny");
+
+
+const myTuple:[string,number] = ["Hello", 123];
+
+function printName(name: string){
+    console.log(`My name is ${name.toUpperCase()}`);
+}
+
+printName('Jenny');
+
+
