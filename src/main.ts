@@ -19,4 +19,12 @@ function printName(name: string){
 
 printName('Jenny');
 
+function sum(num1: number, num2:number): string | number{
+    if(num1>0){
+        return 'num1 more than zero'
+    }
+    return num1+num2;
+}
+
+const result = sum(1,2);
 
