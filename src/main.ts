@@ -37,15 +37,40 @@ names.forEach((name)=>{
     console.log(`Hello ${name.toUpperCase()}`);
 })
 
+
+interface Position  {
+    x: number;
+    y: number;
+}
+
+// type Position = {
+//     x: number;
+//     y: number;
+// }
+
 //Object Type
-let position:{x: number, y: number} = {x:0, y:0};
+let position:{x: number, y: number} = {
+    x:0,
+    y:0,
+}
 
 position.x = 100;
 position.y = 200;
 
 // Function Params object
-function printPosition(position:{x:number, y: number}){
+function printPosition(position:Position){
     console.log(`Location is x = ${position.x}, y = ${position.y}`);
 }
 
 printPosition({x:300, y: 400});
+
+//Type Alias
+type UserID = number | string;
+
+function getUserID(id: UserID){
+    console.log(`UserID: ${id}`);
+}
+
+getUserID(123);
+
+getUserID("123");
