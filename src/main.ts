@@ -37,6 +37,15 @@ names.forEach((name)=>{
     console.log(`Hello ${name.toUpperCase()}`);
 })
 
+//Object Type
+let position:{x: number, y: number} = {x:0, y:0};
 
+position.x = 100;
+position.y = 200;
 
+// Function Params object
+function printPosition(position:{x:number, y: number}){
+    console.log(`Location is x = ${position.x}, y = ${position.y}`);
+}
 
+printPosition({x:300, y: 400});
