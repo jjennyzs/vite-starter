@@ -145,3 +145,48 @@ try{
 }
 
 
+// To do list
+interface Todo{
+    title: string;
+    completed: boolean;
+}
+
+const todos: Todo[] = [];
+
+// todos.push({
+//     title: 'Buy a pen',
+//     completed: false
+// });
+
+function addTodo(title: string){
+    todos.push({
+        title,
+        completed: false,
+    });
+}
+
+function toggle(index: number){
+    const todo = todos[index];
+    todo.completed = !todo.completed;
+
+}
+
+function editTodoTitle(index: number, title: string){
+    todos[index].title = title;
+}
+
+addTodo('Buy a pen');
+console.log(`todo list`, todos);
+
+toggle(0);
+console.log(`todo list`, todos);
+
+editTodoTitle(0, 'Go jogging');
+console.log(`todo list:`, todos);
+
+function deleteTodo(index: number){
+    todos.splice(index, 1);
+}
+
+deleteTodo(0);
+console.log(`todo list: `, todos);
