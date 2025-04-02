@@ -108,4 +108,40 @@ convertToUpperCase("Zach");
 //console.log(convertToUpperCase(null));
 console.log(convertToUpperCase("Zach"));
 
+//type: unknown
+let value: unknown;
+
+value = false;
+value = 50;
+value = "Hello Mom";
+value = {}
+
+function printData(data: unknown){
+    if(typeof data === 'string'){
+        console.log(data.toUpperCase());
+    }
+    if(typeof data === 'number'){
+        console.log(data * 2);
+    }
+}
+
+printData('Hello');
+printData(5);
+
+//type: never
+function assert(name: string): never{
+    throw new Error(`not allowed name`);
+}
+
+//try catch
+try{
+    console.log('Hello World');
+} catch(error){
+    if(error instanceof Error){
+        console.log(error.message);
+    } else{
+        console.log(String(error));
+    }
+}
+
 
