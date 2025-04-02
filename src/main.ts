@@ -94,3 +94,18 @@ printAddress({country: 'Thailand',postal: 1234});
 
 //Type Assertions
 const myCanvas1 = document.getElementById("target_canvas") as HTMLCanvasElement;
+
+//strict null check
+function convertToUpperCase(name: string | null){
+    if(name === null){
+        throw new Error("invalid name");
+    }
+    return name.toUpperCase();
+}
+
+convertToUpperCase("Zach");
+//Example Usage
+//console.log(convertToUpperCase(null));
+console.log(convertToUpperCase("Zach"));
+
+
