@@ -83,11 +83,14 @@ interface Address{
     postal: number;
 }
 
-const address: Address ={
-    country: 'Thailand',
-    postal: 1234
-}
+// const address: Address ={
+//     country: 'Thailand',
+//     postal: 1234
+// }
 function printAddress (address:Address){
     console.log(`My address is ${address.country}, ${address.postal}`)
 }
 printAddress({country: 'Thailand',postal: 1234});
+
+//Type Assertions
+const myCanvas1 = document.getElementById("target_canvas") as HTMLCanvasElement;
